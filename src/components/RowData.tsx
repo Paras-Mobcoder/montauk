@@ -20,6 +20,8 @@ function createData(
   description: string,
   foodNutrients: any[],
   publicationDate: string,
+  searchInput?: string,
+  publishedDate?: string
 ) {
   return {
     brandOwner,
@@ -28,12 +30,14 @@ function createData(
     description,
     foodNutrients,
     publicationDate,
-   
+    searchInput,
+    publishedDate
   };
 }
 
 function Row(props: { row: ReturnType<typeof createData> }) {
   const { row } = props;
+  console.log("props.searchInput",props)
   console.log("row",row);
   
   const [open, setOpen] = React.useState(false);
@@ -55,7 +59,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
         </TableCell>
         <TableCell align="right"><p className='italic'>{row.brandOwner}</p></TableCell>
         <TableCell align="right">{row.description}</TableCell>
-        <TableCell align="right">{row.publicationDate ? row.publicationDate : "NA"}</TableCell>
+        <TableCell align="right">{row.publicationDate ? row.publicationDate : row.publishedDate}</TableCell>
       </TableRow>
       <TableRow>
         <TableCell style={{ paddingBottom: 0, paddingTop: 0 }} colSpan={6}>
@@ -76,10 +80,10 @@ function Row(props: { row: ReturnType<typeof createData> }) {
                   {row.foodNutrients?.length && row.foodNutrients.map((historyRow, index:number) => (
                     <TableRow key={index}>
                       <TableCell component="th" scope="row">
-                        {historyRow.name}
+                        {historyRow.name || historyRow.nutrientName}
                       </TableCell>
                       <TableCell>{historyRow.derivationCode}</TableCell>
-                      <TableCell align="right"><p className='italic'>{historyRow.amount}</p></TableCell>
+                      <TableCell align="right"><p className='italic'>{historyRow.amount || historyRow.value}</p></TableCell>
                       
                     </TableRow>
                   ))}
@@ -94,7 +98,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
 }
 
 
-export default function OuterRow(props:any) {
+export default function RowData(props:any) {
   console.log(props)
   return (
     <TableContainer component={Paper} className="px-[5vw]">

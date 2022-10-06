@@ -4,7 +4,7 @@ import { Stack } from "@mui/system";
 import { getAllItems, getBySearch } from "../API/Services/Services";
 import { DebounceInput } from 'react-debounce-input';
 import CircularProgress from '@mui/material/CircularProgress';
-import OuterRow from "./OuterRow";
+import RowData from "./RowData";
 
 interface FoodList {
   brandOwner: string;
@@ -36,7 +36,7 @@ export function FoodList() {
         input: `${searchInput}`,
       };
       await getBySearch(payload).then((res) => {
-        console.log(res);
+        console.log("res in getBySearch",res);
         if (res.data.foods.length > 0) {
           setLoading(false)
           console.log("res",res)
@@ -77,7 +77,7 @@ export function FoodList() {
       </div> */}
       {foodlist?.length && !Loading ?
         <>
-          <OuterRow rows={foodlist} />
+          <RowData rows={foodlist} searchInput={searchInput} />
           <Stack className="py-4" spacing={2}>
             <Pagination className="mx-auto" count={10} onChange={onPageChange} color="primary" />
           </Stack> </>
