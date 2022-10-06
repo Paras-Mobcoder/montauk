@@ -84,7 +84,6 @@ function Row(props: { row: ReturnType<typeof createData> }) {
                       </TableCell>
                       <TableCell>{historyRow.derivationCode}</TableCell>
                       <TableCell align="right"><p className='italic'>{historyRow.amount || historyRow.value}</p></TableCell>
-                      
                     </TableRow>
                   ))}
                 </TableBody>
@@ -110,7 +109,6 @@ export default function RowData(props:any) {
             <TableCell align="right"><p className='font-bold text-xl'>Brand Owner</p></TableCell>
             <TableCell align="right"><p className='font-bold text-xl'>Description</p></TableCell>
             <TableCell align="right"><p className='font-bold text-xl'>Publication Date</p></TableCell>
-           
           </TableRow>
         </TableHead>
         <TableBody>

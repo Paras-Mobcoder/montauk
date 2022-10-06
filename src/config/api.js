@@ -1,8 +1,8 @@
-export default (()=>{
-    const api = process.env.REACT_APP_API_URL
-    // get all items
-    return{
-        getAllItems: `${api}v1/foods/list`,
-        getBySearch: `${api}v1/foods/search`
-    }
-})()
+const baseUrl = "https://api.nal.usda.gov/fdc";
+
+export default (() => {
+    return {
+      KEY: "DucsoFFA2j8tCseqFQUva3wusvtgCxaSq0Fh8xgr",
+      SEARCH: baseUrl + "/v1/foods/search",
+    };
+  })();
