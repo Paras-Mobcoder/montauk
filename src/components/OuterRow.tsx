@@ -115,6 +115,6 @@ export default function OuterRow(props:any) {
           ))}
         </TableBody>
       </Table>
-    </TableContainer>
+    </TableContainer> 
   );
 }
