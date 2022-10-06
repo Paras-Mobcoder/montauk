@@ -4,7 +4,7 @@ import { Stack } from "@mui/system";
 import { getAllItems, getBySearch } from "../API/Services/Services";
 import { DebounceInput } from 'react-debounce-input';
 import CircularProgress from '@mui/material/CircularProgress';
-import OuterRow from "../components/OuterRow";
+import OuterRow from "./OuterRow";
 
 interface FoodList {
   brandOwner: string;
