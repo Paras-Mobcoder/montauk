@@ -14,7 +14,6 @@ import KeyboardArrowDownIcon from '@mui/icons-material/KeyboardArrowDown';
 import KeyboardArrowUpIcon from '@mui/icons-material/KeyboardArrowUp';
 
 function createData(
-  brandOwner: string,
   dataType: number,
   fdcId: number,
   description: string,
@@ -24,7 +23,6 @@ function createData(
   publishedDate?: string
 ) {
   return {
-    brandOwner,
     dataType,
     fdcId,
     description,
@@ -57,7 +55,6 @@ function Row(props: { row: ReturnType<typeof createData> }) {
         <TableCell component="th" scope="row">
           {row.fdcId}
         </TableCell>
-        <TableCell align="right"><p className='italic'>{row.brandOwner}</p></TableCell>
         <TableCell align="right">{row.description}</TableCell>
         <TableCell align="right">{row.publicationDate ? row.publicationDate : row.publishedDate}</TableCell>
       </TableRow>
@@ -106,7 +103,6 @@ export default function RowData(props:any) {
           <TableRow>
             <TableCell />
             <TableCell><p className='font-bold text-xl'>ID</p></TableCell>
-            <TableCell align="right"><p className='font-bold text-xl'>Brand Owner</p></TableCell>
             <TableCell align="right"><p className='font-bold text-xl'>Description</p></TableCell>
             <TableCell align="right"><p className='font-bold text-xl'>Publication Date</p></TableCell>
           </TableRow>

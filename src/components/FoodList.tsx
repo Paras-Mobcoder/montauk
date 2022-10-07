@@ -7,7 +7,6 @@ import CircularProgress from '@mui/material/CircularProgress';
 import RowData from "./RowData";
 
 interface FoodList {
-  brandOwner: string;
   dataType: string;
   description: string;
   fdcId: number;
@@ -79,22 +78,22 @@ export function FoodList() {
       <Container className="flex flex-row justify-center items-center bg-[#EDECFA] mb-4">
         <h2 className="italic font-bold text-xl py-12">List of Food Items</h2>
       </Container>
-      <Container className="flex flex-row justify-center items-center mb-4">
+      <Container className="flex md:flex-row justify-center items-center mb-4 flex-col">
 
         {searchText === "" ? (
           <div
-            style={{
-              flexDirection: "row",
-              display: "flex",
-              justifyContent: "center",
-            }}
+            // style={{
+            //   flexDirection: "row",
+            //   display: "flex",
+            //   justifyContent: "center",
+            // }}
           >
             <div
-              style={{
-                flexDirection: "row",
-                display: "flex",
-                alignItems: "center",
-              }}
+              // style={{
+              //   flexDirection: "row",
+              //   display: "flex",
+              //   alignItems: "center",
+              // }}
             >
               <Typography>Carbohydrates</Typography>
               <Checkbox
@@ -103,11 +102,11 @@ export function FoodList() {
               />
             </div>
             <Box
-              sx={{
-                flexDirection: "row",
-                display: "flex",
-                alignItems: "center",
-              }}
+              // sx={{
+              //   flexDirection: "row",
+              //   display: "flex",
+              //   alignItems: "center",
+              // }}
             >
               <Typography>Protien</Typography>
               <Checkbox
@@ -116,11 +115,11 @@ export function FoodList() {
               />
             </Box>
             <Box
-              sx={{
-                flexDirection: "row",
-                display: "flex",
-                alignItems: "center",
-              }}
+              // sx={{
+              //   flexDirection: "row",
+              //   display: "flex",
+              //   alignItems: "center",
+              // }}
             >
               <Typography>Minerals</Typography>
               <Checkbox
@@ -129,11 +128,11 @@ export function FoodList() {
               />
             </Box>
             <Box
-              sx={{
-                flexDirection: "row",
-                display: "flex",
-                alignItems: "center",
-              }}
+              // sx={{
+              //   flexDirection: "row",
+              //   display: "flex",
+              //   alignItems: "center",
+              // }}
             >
               <Typography>Fats</Typography>
               <Checkbox
@@ -142,11 +141,11 @@ export function FoodList() {
               />
             </Box>
             <Box
-              sx={{
-                flexDirection: "row",
-                display: "flex",
-                alignItems: "center",
-              }}
+              // sx={{
+              //   flexDirection: "row",
+              //   display: "flex",
+              //   alignItems: "center",
+              // }}
             >
               <Typography>Vitamins</Typography>
               <Checkbox
@@ -155,11 +154,11 @@ export function FoodList() {
               />
             </Box>
             <Box
-              sx={{
-                flexDirection: "row",
-                display: "flex",
-                alignItems: "center",
-              }}
+              // sx={{
+              //   flexDirection: "row",
+              //   display: "flex",
+              //   alignItems: "center",
+              // }}
             >
               <Typography>Dietary Fibre</Typography>
               <Checkbox
