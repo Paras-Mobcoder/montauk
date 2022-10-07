@@ -78,7 +78,7 @@ export function FoodList() {
       <Container className="flex flex-row justify-center items-center bg-[#EDECFA] mb-4">
         <h2 className="italic font-bold text-xl py-12">List of Food Items</h2>
       </Container>
-      <Container className="flex md:flex-row justify-center items-center mb-4 flex-col">
+      <Container className="flex md:flex-row justify-center items-center mb-4 sm:flex-col">
 
         {searchText === "" ? (
           <div
