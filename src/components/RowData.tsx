@@ -69,7 +69,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
                 <TableHead>
                   <TableRow>
                     <TableCell><p className='font-bold'>Name</p></TableCell>
-                    <TableCell><p className='font-bold'>Derivation Code</p></TableCell>
+                    {/* <TableCell><p className='font-bold'>Derivation Code</p></TableCell> */}
                     <TableCell align="right"><p className='font-bold'>Amount</p></TableCell>
                   </TableRow>
                 </TableHead>
@@ -79,7 +79,7 @@ function Row(props: { row: ReturnType<typeof createData> }) {
                       <TableCell component="th" scope="row">
                         {historyRow.name || historyRow.nutrientName}
                       </TableCell>
-                      <TableCell>{historyRow.derivationCode}</TableCell>
+                      {/* <TableCell>{historyRow.derivationCode}</TableCell> */}
                       <TableCell align="right"><p className='italic'>{historyRow.amount || historyRow.value}</p></TableCell>
                     </TableRow>
                   ))}
