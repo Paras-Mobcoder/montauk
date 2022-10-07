@@ -75,7 +75,7 @@ export function FoodList() {
 
   return (
     <>
-      <Container className="flex flex-row justify-center items-center bg-[#EDECFA] mb-4">
+      <Container className="flex flex-row justify-center items-center mb-4">
         <h2 className="italic font-bold text-xl py-12">List of Food Items</h2>
       </Container>
       <Container className="flex lg:flex-row justify-center items-center mb-4 sm:flex-col">
